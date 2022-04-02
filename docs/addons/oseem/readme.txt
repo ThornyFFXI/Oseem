@@ -1,5 +1,6 @@
 Oseem is an addon to augment Reisenjima equipment.
-It is entirely controlled by GUI, with no typed commands or configuration files.
+It is entirely controlled by GUI, with no configuration files and only one typed command.
+If you end up with the window offscreen, you can type '/oseem reset' to return it to the top left corner.
 To use:
 -Load the addon.
 -Trade an item to Oseem.
