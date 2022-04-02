@@ -175,6 +175,11 @@ local function DrawAugmentMenu(decisionRequired)
             end
             imgui.SameLine(imgui.GetWindowWidth() - 155);
             if imgui.Button('Continue', { 140 }) then
+                if not SelectStone() then
+                    PrintError('No stones remaining.');
+                    gState.State = 'ExitMenu';
+                    return;
+                end
                 gState.State = 'AugmentDelay';
             end
         else

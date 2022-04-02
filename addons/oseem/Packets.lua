@@ -169,15 +169,12 @@ ashita.events.register('packet_in', 'packet_in_cb', function (e)
                 gState.Fern = fern;
                 gState.Taupe = taupe;
                 BuildAugment(e);
-                if EvaluateAugment() or (gState.State == 'AwaitingDecision') then
+                if EvaluateAugment() or (gState.State == 'AwaitingDecision') or not SelectStone() then
                     gState.State = 'AwaitingDecision';
                     gState.CurrentDelay = os.clock() + gState.AugmentDelay[1];
-                elseif SelectStone() then
+                else
                     gState.State = 'AugmentDelay';
                     gState.CurrentDelay = os.clock() + gState.AugmentDelay[1];
-                else
-                    PrintError('No valid stones remain.  Exiting menu.');
-                    gState.State = 'ExitMenu';
                 end
                 gState.MenuDelay = os.clock() + 0.2;
             end

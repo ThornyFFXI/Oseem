@@ -1,6 +1,6 @@
 addon.name      = 'Oseem';
 addon.author    = 'Thorny';
-addon.version   = '1.00';
+addon.version   = '1.01';
 addon.desc      = 'Automatic augmenter for reisenjima augment system with the NPC Oseem.';
 addon.link      = 'https://github.com/ThornyFFXI/Oseem';
 
