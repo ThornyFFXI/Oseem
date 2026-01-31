@@ -126,7 +126,7 @@ local function DrawAugmentMenu(decisionRequired)
             imgui.Text(string.format('x%d', gState.Pellucid));
         end
         imgui.BeginGroup();
-        imgui.BeginChild('leftpane', { 220, 150 }, false, 128);
+        imgui.BeginChild('leftpane', { 220, 150 }, ImGuiChildFlags_None, 128);
         imgui.TextColored( { 1.0, 0.75, 0.55, 1.0 }, 'Existing Augments:');
         for _,v in ipairs(AugmentData.Current) do
             if (v.Current > 0) then
@@ -138,7 +138,7 @@ local function DrawAugmentMenu(decisionRequired)
         imgui.EndGroup();
         imgui.SameLine();
         imgui.BeginGroup();
-        imgui.BeginChild('rightpane', { 220, 150 }, false, 128);
+        imgui.BeginChild('rightpane', { 220, 150 }, ImGuiChildFlags_None, 128);
         imgui.TextColored( { 1.0, 0.75, 0.55, 1.0 }, 'Pending Augments:');
         for _,v in ipairs(AugmentData.Pending) do
             if (v.Pending > 0) then
